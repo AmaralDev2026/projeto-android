@@ -4,7 +4,7 @@
 
 @font-face {  /*diretriz (ou regra especial) que permite aos desenvolvedores web carregar e utilizar fontes personalizadas em um site */
     font-family: 'Android';
-    src: url('/fontes/idroid.otf') format('opentype');
+    src: url('/font/idroid.otf') format('opentype');
     font-weight: normal;
 }
 
