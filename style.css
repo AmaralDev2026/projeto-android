@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {  /*diretriz (ou regra especial) que permite aos desenvolvedores web carregar e utilizar fontes personalizadas em um site */
+    font-family: 'Android';
+    src: url('/fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+:root{  /* pseudoclass raiz da árvore do documento sempre começa a váriavel com dois traços ( -- ) usamos em todo o projeto*/
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84; /* paleta de cores */
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --font-padrão: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', 'cursive';
+    --font-android: 'Android', 'cursive';
+}
+
+* {  /* é o seletor global, que seleciona todos os elementos HTML presentes na página de uma só vez. permite aplicar regras de estilo (como margens, preenchimentos ou fontes*/
+    margin: 0px;
+    padding: 0px;
+}
+
+body{ 
+    background-color: var(--cor0);
+    font-family: var(--font-padrão);
+}
+
+a.externo::after {
+    content: '\00A0\1F517';
+}
+
+main p {
+    margin: 15px 0px;
+}
+
+header { /* definem um cabeçalho. Portanto, todo conteúdo que estiver dentro dela faz parte de um cabeçalho */
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+header > h1 { /* cabeçalho do ( > ) children configurando neste caso o h1*/
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+header > p {  /* cabeçalho do ( > ) children configurando neste caso o p */
+    color: white;
+    font-family: var(--font-padrão);
+    font-size: 1.2em;
+    max-width: 600px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315);
+}
+
+nav {  /* elemento de navegação */
+    background-color: var(--cor5);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.192);
+    padding: 20px;
+}
+
+nav > a {  /* cabeçalho do ( > ) children configurando neste caso o a */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bolder;
+    transition-duration: .5s;
+}
+
+nav > a:hover {  /* cabeçalho do ( > ) children configurando neste caso o a com o pseudoclass :hover */
+    background-color: var(--cor3);
+    color: var(--cor5);
+}
+
+main { /* representam o conteúdo principal do seu corpo, ou seja, o conteúdo relacionado diretamente com o tópico central da página */
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main h1 {  /* configurando  o  Titulo h1 */
+    color: var(--cor5);
+    font-family: var(--font-android);
+    font-weight: normal;
+    font-family: 1.8px;
+}
+
+main h2 {  /* configurando  o  Titulo h2 */
+    font-family: var(--font-android);
+    color: var(--cor4);
+    font-size: 1.3em;
+    font-weight: normal;
+    text-indent: 8px; /* afastamento do inicio do paragrafo */
+    background-image: linear-gradient(to right, var(--cor1), transparent); /* forma o degrade na tarja da frase */
+}
+
+main p {
+    margin: 15px 0px;
+    text-align: justify; /* ajusta o testo na página */
+    text-indent: 30px; /* afastamento do inicio do paragrafo */
+    font-size: 1em;    /* tamanho da fonte */
+    line-height: 2em; /* altura entre linhas */
+}
+
+main strong {
+    color: var(--cor4);
+    font-weight: bold; /* deixa fonte em negrito */
+}
+
+main a {  /* colocado se o > não configura todos, somente a tag especifica do link de navegação */
+    text-decoration: none; /* retira a linha do texto link */
+    font-weight: bold; /* deixa fonte em negrito */
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
+}
+
+main a:hover {
+    text-decoration: underline; /* aparece a linha embaixo quando passa o mouse na palavra */
+    color: var(--cor5);
+}
+
+main img {  /* configurando a imagem dentro do main */
+    width: 100%;
+}
+
+main img.pequena{   /* configurando a imagem e classe dentro do main */
+    max-width: 350px;  /* altura máxima */
+    display: block;
+    margin: auto;
+}
+
+div.video { /* div com class para poder adaptar e centralizar o video no meu site */
+    background-color: var(--cor5);
+    margin: 0px -30px 30px -30px;
+    padding: 20px;
+    padding-bottom: 50%;
+    position: relative;
+}
+
+div.video > iframe {  /* div com class para poder adaptar e centralizar o video no meu site */
+     position: absolute;
+     top: 5%;
+     left: 5%;
+     width: 90%;
+     height: 90%;
+}
+
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.078);
+}
+
+aside > h3 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px; /* borda negativa igula as margens */
+    border-radius: 10px 10px 0px 0px;
+}
+
+aside > ul {
+    list-style-type: '\2714\00A0\00A0'; /* esse código é do sinal de check do emoji */
+    list-style-position: inside;  /* o que estava fora do box agora fica dentro */
+    columns: 2; /* numero e colunas dentro do box */
+
+}
+
+footer {  /* rodapé da página */
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    padding: 7px;
+}
+
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}
